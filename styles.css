@@ -1,12 +1,17 @@
 :root {
   color-scheme: dark;
-  --ink: #f2efe8;
-  --muted: rgba(242, 239, 232, 0.48);
-  --faint: rgba(242, 239, 232, 0.12);
-  --hairline: rgba(242, 239, 232, 0.16);
-  --canvas: #09090b;
-  --amber: #ef7d45;
-  --blue: #7893a8;
+  --ink: #f0d9c4;
+  --muted: rgba(215, 185, 166, 0.62);
+  --faint: rgba(183, 149, 127, 0.14);
+  --hairline: rgba(215, 185, 166, 0.2);
+  --canvas: #241208;
+  --espresso: #4c2b08;
+  --coffee: #6d3914;
+  --caramel: #a87743;
+  --almond: #b7957f;
+  --vanilla: #d7b9a6;
+  --amber: var(--caramel);
+  --blue: var(--coffee);
   --pointer-x: 72%;
   --pointer-y: 32%;
   --frame-pad: clamp(1.25rem, 3vw, 3rem);
@@ -65,8 +70,8 @@ a {
   z-index: -1;
   overflow: hidden;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.025), transparent 30%),
-    radial-gradient(circle at 80% 10%, #19191c 0, transparent 36%),
+    linear-gradient(115deg, rgba(215, 185, 166, 0.045), transparent 32%),
+    radial-gradient(circle at 80% 10%, var(--espresso) 0, transparent 39%),
     var(--canvas);
 }
 
@@ -88,7 +93,7 @@ a {
   width: 64vw;
   height: 64vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(239, 125, 69, 0.48), transparent 67%);
+  background: radial-gradient(circle, rgba(168, 119, 67, 0.55), transparent 67%);
   animation: amber-drift 16s ease-in-out infinite alternate;
 }
 
@@ -97,7 +102,7 @@ a {
   width: 70vw;
   height: 70vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(74, 104, 132, 0.46), transparent 68%);
+  background: radial-gradient(circle, rgba(109, 57, 20, 0.62), transparent 68%);
   animation: blue-drift 19s ease-in-out infinite alternate;
 }
 
@@ -105,8 +110,8 @@ a {
   inset: -10%;
   background: radial-gradient(
     circle 22rem at var(--pointer-x) var(--pointer-y),
-    rgba(255, 246, 226, 0.06),
-    rgba(255, 246, 226, 0.015) 38%,
+    rgba(240, 217, 196, 0.08),
+    rgba(183, 149, 127, 0.025) 38%,
     transparent 72%
   );
   transition: background-position 120ms linear;
@@ -130,10 +135,10 @@ a {
   min-height: calc(100dvh - (var(--frame-pad) * 2));
   margin: var(--frame-pad);
   border: 1px solid var(--hairline);
-  background: rgba(9, 9, 11, 0.22);
+  background: rgba(36, 18, 8, 0.3);
   box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.42),
-    inset 0 0 120px rgba(0, 0, 0, 0.15);
+    0 0 0 1px rgba(18, 8, 3, 0.5),
+    inset 0 0 120px rgba(76, 43, 8, 0.12);
 }
 
 .frame::before,
@@ -142,7 +147,7 @@ a {
   z-index: 2;
   width: 0.55rem;
   height: 0.55rem;
-  border-color: rgba(242, 239, 232, 0.38);
+  border-color: rgba(215, 185, 166, 0.42);
   content: "";
   pointer-events: none;
 }
@@ -178,7 +183,7 @@ a {
   width: 2.65rem;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(242, 239, 232, 0.55);
+  border: 1px solid rgba(215, 185, 166, 0.62);
   border-radius: 50%;
   font: 500 0.72rem/1 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   letter-spacing: -0.06em;
@@ -231,11 +236,11 @@ a {
   bottom: 15%;
   width: clamp(6rem, 10vw, 9rem);
   aspect-ratio: 1;
-  border: 1px solid rgba(242, 239, 232, 0.08);
+  border: 1px solid rgba(183, 149, 127, 0.12);
   border-radius: 50%;
   box-shadow:
-    0 0 0 1.4rem rgba(242, 239, 232, 0.018),
-    0 0 0 2.8rem rgba(242, 239, 232, 0.012);
+    0 0 0 1.4rem rgba(183, 149, 127, 0.03),
+    0 0 0 2.8rem rgba(183, 149, 127, 0.018);
   content: "";
 }
 
@@ -276,7 +281,7 @@ h1 {
 .intro {
   max-width: 31rem;
   margin: 0;
-  color: rgba(242, 239, 232, 0.72);
+  color: rgba(240, 217, 196, 0.78);
   font-size: clamp(0.94rem, 1.3vw, 1.12rem);
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -323,8 +328,8 @@ h1 {
   inset: 0;
   transform: translateX(-101%);
   background:
-    linear-gradient(90deg, rgba(239, 125, 69, 0.15), rgba(239, 125, 69, 0.025)),
-    rgba(255, 255, 255, 0.018);
+    linear-gradient(90deg, rgba(168, 119, 67, 0.22), rgba(109, 57, 20, 0.06)),
+    rgba(215, 185, 166, 0.025);
   content: "";
   transition: transform 440ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -371,7 +376,7 @@ h1 {
   place-items: center;
   border: 1px solid var(--hairline);
   border-radius: 50%;
-  color: rgba(242, 239, 232, 0.68);
+  color: rgba(215, 185, 166, 0.72);
   font-size: 1.1rem;
   transition:
     transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -426,7 +431,7 @@ h1 {
   height: 0.4rem;
   border-radius: 50%;
   background: var(--amber);
-  box-shadow: 0 0 0.8rem rgba(239, 125, 69, 0.8);
+  box-shadow: 0 0 0.8rem rgba(168, 119, 67, 0.85);
 }
 
 .footer-credit {
@@ -434,7 +439,7 @@ h1 {
 }
 
 .footer-accent {
-  color: rgba(242, 239, 232, 0.7);
+  color: rgba(215, 185, 166, 0.78);
 }
 
 @keyframes amber-drift {
