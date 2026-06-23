@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090b">
+    <meta
+      name="description"
+      content="Mary Li's personal portfolio — resume, LinkedIn, and photography."
+    >
+    <meta property="og:title" content="Mary Li — Portfolio">
+    <meta
+      property="og:description"
+      content="A small corner of the internet for work, experience, and photographs."
+    >
+    <meta property="og:type" content="website">
+    <title>Mary Li — Portfolio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="atmosphere" aria-hidden="true">
+      <div class="light-leak light-leak--amber"></div>
+      <div class="light-leak light-leak--blue"></div>
+      <div class="aperture"></div>
+      <div class="grain"></div>
+    </div>
+
+    <div class="frame" id="home">
+      <header class="site-header">
+        <a class="monogram" href="#home" aria-label="Mary Li, home">
+          <span>ML</span>
+        </a>
+
+        <div class="header-note" aria-hidden="true">
+          <span>Personal index</span>
+          <span>Portfolio / <span data-year>2026</span></span>
+        </div>
+      </header>
+
+      <main class="layout" id="main-content">
+        <section class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            Mary Li
+          </p>
+
+          <h1 id="page-title">Mary Li</h1>
+
+          <p class="intro">
+            A small corner of the internet for work, experience, and
+            photographs.
+          </p>
+        </section>
+
+        <nav class="link-index" aria-label="Portfolio links">
+          <p class="index-heading">
+            <span>Index</span>
+            <span>04 links</span>
+          </p>
+
+          <a
+            class="index-link is-current"
+            href="#home"
+            data-status="You are here"
+            aria-current="page"
+          >
+            <span class="index-number">00</span>
+            <span class="index-copy">
+              <span class="index-title">Home</span>
+              <span class="index-detail">Return to the beginning</span>
+            </span>
+            <span class="index-arrow index-arrow--home" aria-hidden="true">●</span>
+          </a>
+
+          <a
+            class="index-link"
+            href="assets/mary-li-resume.pdf"
+            target="_blank"
+            rel="noopener"
+            data-status="Open resume / PDF"
+          >
+            <span class="index-number">01</span>
+            <span class="index-copy">
+              <span class="index-title">Resume</span>
+              <span class="index-detail">Experience, projects &amp; skills</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="index-link"
+            href="https://www.linkedin.com/in/mary-li-74a986340/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-status="Connect on LinkedIn"
+          >
+            <span class="index-number">02</span>
+            <span class="index-copy">
+              <span class="index-title">LinkedIn</span>
+              <span class="index-detail">Work, education &amp; connections</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="index-link"
+            href="https://vsco.co/enskyu/gallery"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-status="Enter the photo gallery"
+          >
+            <span class="index-number">03</span>
+            <span class="index-copy">
+              <span class="index-title">Photos</span>
+              <span class="index-detail">A visual journal on VSCO</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </main>
+
+      <footer class="site-footer">
+        <p class="status" aria-live="polite">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-status-text>Choose a frame</span>
+        </p>
+
+        <p class="footer-credit">
+          Selected links <span aria-hidden="true">—</span>
+          <span class="footer-accent">01 / 01</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
