@@ -1,13 +1,8 @@
 const root = document.documentElement;
 const statusText = document.querySelector("[data-status-text]");
 const links = document.querySelectorAll("[data-status]");
-const year = document.querySelector("[data-year]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(pointer: fine)");
-
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
 
 for (const link of links) {
   const showStatus = () => {
