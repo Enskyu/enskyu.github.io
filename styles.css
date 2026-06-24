@@ -397,8 +397,8 @@ h1 {
 
 .index-link:hover .index-arrow,
 .index-link:focus-visible .index-arrow {
-  transform: rotate(45deg);
-  border-color: var(--ink);
+  transform: translateX(0.16rem);
+  border-color: #fff;
   background: var(--ink);
   color: var(--canvas);
 }
@@ -470,18 +470,72 @@ h1 {
   min-height: clamp(36rem, 70vh, 48rem);
   padding: clamp(2rem, 5vw, 6.5rem);
   flex-direction: column;
-  justify-content: space-between;
+  gap: clamp(2rem, 4vw, 3.75rem);
   border-right: 1px solid var(--hairline);
 }
 
 .about-title {
-  max-width: 6.5em;
-  margin: auto 0;
-  white-space: normal;
+  max-width: none;
+  margin: clamp(1rem, 4vh, 3rem) 0 0;
+  padding: 0;
+  font-size: clamp(3.35rem, 4.9vw, 5.25rem);
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.about-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 1.115 / 1;
+  border: 1px solid rgba(215, 185, 166, 0.24);
+  border-radius: clamp(1.5rem, 3vw, 2.75rem);
+  background: var(--espresso);
+  box-shadow: 0 1.5rem 4rem rgba(18, 8, 3, 0.24);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.social-handles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem clamp(1.5rem, 4vw, 3rem);
+}
+
+.social-handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font: 400 clamp(0.75rem, 1vw, 0.9rem)/1.2 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+a.social-handle {
+  transition: color 180ms ease;
+}
+
+a.social-handle:hover,
+a.social-handle:focus-visible {
+  color: #fff;
+}
+
+.social-handle img {
+  width: 1.6rem;
+  height: 1.6rem;
+  flex: 0 0 auto;
 }
 
 .about-copy {
   max-width: 34rem;
+  margin-top: clamp(0.5rem, 2vw, 1.5rem);
   color: rgba(240, 217, 196, 0.78);
   font-size: clamp(0.9rem, 1.25vw, 1.08rem);
   font-weight: 300;
@@ -503,7 +557,7 @@ h1 {
 
 .about-placeholder {
   display: flex;
-  min-height: 19rem;
+  min-height: 13rem;
   padding: clamp(1.5rem, 3vw, 3rem);
   align-items: flex-start;
   gap: clamp(1rem, 2vw, 2rem);
@@ -514,10 +568,10 @@ h1 {
 }
 
 .about-placeholder p {
-  max-width: 20rem;
+  max-width: 34rem;
   margin: auto 0;
   color: var(--muted);
-  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  font-size: clamp(1.05rem, 1.55vw, 1.45rem);
   font-weight: 300;
   letter-spacing: -0.025em;
   line-height: 1.4;
@@ -601,9 +655,96 @@ h1 {
   font: 300 0.65rem/1.4 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
-.about-link > span:last-child {
+.about-link .index-arrow {
+  flex: 0 0 auto;
+}
+
+.about-link:hover .index-arrow,
+.about-link:focus-visible .index-arrow {
+  transform: translateX(0.16rem);
+  border-color: #fff;
+  background: var(--ink);
+  color: var(--canvas);
+}
+
+.games-layout {
+  display: flex;
+  min-width: 0;
+  min-height: clamp(34rem, 70vh, 48rem);
+  padding: clamp(2rem, 6vw, 7rem);
+  flex-direction: column;
+  gap: clamp(2rem, 5vh, 4rem);
+}
+
+h1.games-title {
+  width: 100%;
+  max-width: none;
+  margin: auto 0 0;
+  padding: 0;
+  font-size: clamp(2.65rem, 5vw, 5.5rem);
+  white-space: nowrap;
+}
+
+.game-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  border: 1px solid var(--hairline);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.game-group {
+  display: grid;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: 2rem 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.game-group + .game-group {
+  border-left: 1px solid var(--hairline);
+}
+
+.game-group-number {
+  margin: 0;
   color: var(--muted);
-  font-size: 1.15rem;
+  font: 400 0.64rem/1.4 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+.game-group h2 {
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+.game-group ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.5rem;
+  list-style: none;
+}
+
+.game-group li {
+  color: rgba(240, 217, 196, 0.78);
+  font-size: clamp(0.83rem, 1.15vw, 1rem);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.game-group li::before {
+  margin-right: 0.55rem;
+  color: var(--caramel);
+  content: "•";
+}
+
+.game-recommendation {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-weight: 300;
 }
 
 @keyframes amber-drift {
@@ -697,7 +838,38 @@ h1 {
   }
 
   .about-title {
-    font-size: clamp(3.8rem, 18vw, 5rem);
+    margin-top: 0.75rem;
+    font-size: clamp(2.35rem, 10.4vw, 3.25rem);
+  }
+
+  .games-layout {
+    min-height: 34rem;
+    padding: 1.5rem;
+  }
+
+  h1.games-title {
+    font-size: clamp(2rem, 7.6vw, 3.5rem);
+  }
+
+  .game-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .game-group + .game-group {
+    border-top: 1px solid var(--hairline);
+    border-left: 0;
+  }
+
+  .game-group ul {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    border-radius: 1.5rem;
+  }
+
+  .social-handles {
+    gap: 1rem 1.5rem;
   }
 
   .fact {

@@ -10,7 +10,7 @@ for (const link of links) {
   };
 
   const resetStatus = () => {
-    if (statusText) statusText.textContent = "Choose a frame";
+    if (statusText) statusText.textContent = "Explore around :)";
   };
 
   link.addEventListener("mouseenter", showStatus);
