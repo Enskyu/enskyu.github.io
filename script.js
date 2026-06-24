@@ -4,13 +4,25 @@ const links = document.querySelectorAll("[data-status]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(pointer: fine)");
 
+if (document.querySelector(".welcome-splash")) {
+  const revealDelay = reducedMotion.matches ? 100 : 1250;
+
+  window.setTimeout(() => {
+    root.classList.add("intro-complete");
+
+    window.setTimeout(() => {
+      root.classList.remove("intro-pending");
+    }, reducedMotion.matches ? 50 : 700);
+  }, revealDelay);
+}
+
 for (const link of links) {
   const showStatus = () => {
     if (statusText) statusText.textContent = link.dataset.status;
   };
 
   const resetStatus = () => {
-    if (statusText) statusText.textContent = "Explore around :)";
+    if (statusText) statusText.textContent = "Order something :D";
   };
 
   link.addEventListener("mouseenter", showStatus);

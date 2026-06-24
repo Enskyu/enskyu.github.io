@@ -15,13 +15,18 @@
     >
     <meta property="og:type" content="website">
     <title>Mary Li — Portfolio</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script>document.documentElement.classList.add("intro-pending");</script>
+    <link rel="icon" href="assets/coffee-favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
   </head>
 
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="welcome-splash" aria-hidden="true">
+      <p>~ Take a seat, the coffee is ready ~</p>
+    </div>
 
     <div class="atmosphere" aria-hidden="true">
       <div class="light-leak light-leak--amber"></div>
@@ -32,17 +37,14 @@
 
     <div class="frame" id="home">
       <header class="site-header">
-        <a class="monogram" href="#home" aria-label="Mary Li, home">
-          <span>ML</span>
-        </a>
-
+        <p class="home-greeting">~ Take a seat, the coffee is ready ~</p>
       </header>
 
       <main class="layout" id="main-content">
         <section class="hero" aria-labelledby="page-title">
           <p class="eyebrow">
             <span class="eyebrow-line"></span>
-            Mary Li
+            Overview
           </p>
 
           <h1 id="page-title">Mary Li</h1>
@@ -50,14 +52,13 @@
           <p class="intro">
             Hello! I'm a 2B student in the University of Waterloo studying
             Mathematics/Financial Analysis and Risk Management with a CFA
-            specialization. Check out the links below :)
+            specialization. Check out the links on the side :)
           </p>
         </section>
 
         <nav class="link-index" aria-label="Portfolio links">
           <p class="index-heading">
-            <span>Index</span>
-            <span>04 links</span>
+            <span>Menu</span>
           </p>
 
           <a
@@ -123,7 +124,7 @@
       <footer class="site-footer">
         <p class="status" aria-live="polite">
           <span class="status-dot" aria-hidden="true"></span>
-          <span data-status-text>Explore around :)</span>
+          <span data-status-text>Order something :D</span>
         </p>
       </footer>
     </div>
